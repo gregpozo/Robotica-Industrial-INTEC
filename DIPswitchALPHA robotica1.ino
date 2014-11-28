@@ -323,7 +323,7 @@ void loop()
   }
 }
 
-/***************************************************************FUNCIONES********************************************************************/
+/*===============  FUNCIONES  ===============*/
 void motorCalibration()                                             // Encendido de motor para calibracion
 {
   digitalWrite(ENABLE_MOTOR, HIGH); 												
