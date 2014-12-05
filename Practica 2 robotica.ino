@@ -64,17 +64,17 @@ void setup()
 
 void loop() 
 {
-  Value       = analogRead(POT);                                            // Lee valor analogo de POT
-  int mapping = map(Value, 0, 1023, 0, 31);                                 // Mapeo de POT a ENCODER
+  Value       = analogRead(POT);                                            				// Lee valor analogo de POT
+  int mapping = map(Value, 0, 1023, 0, 31);                                 				// Mapeo de POT a ENCODER
   // read calibrated sensor values and obtain a measure of the line position from 0 to 500
   // unsigned int position = qtrrc.readLine(sensorValues);
   // print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
   // 1000 means minimum reflectance, followed by the line positionntro
   unsigned int position = qtrrc.readLine(sensorValues);
-  for (unsigned char i = 0; i < NUM_SENSORS; i++)                           // Lee todos los sensores del array
+  for (unsigned char i = 0; i < NUM_SENSORS; i++)                           				// Lee todos los sensores del array
   {
-      //Serial.print(sensorValues[i]);                                      // Imprime los valores de los sensores
-      //Serial.print('\t');                                                 // Imprime un tab   
+      //Serial.print(sensorValues[i]);                                      				// Imprime los valores de los sensores
+      //Serial.print('\t');                                                 				// Imprime un tab   
       if (sensorValues[i] < 500)
       {
         sensorValues[i] = 0;
@@ -92,17 +92,17 @@ void loop()
   {
     force = 0;
     motorgder();
-    Value       = analogRead(POT);                                          // Lee valor analogo de POT
-    int mapping = map(Value, 0, 1023, 0, 31);                               // Mapeo de POT a ENCODER
+    Value       = analogRead(POT);                                          				// Lee valor analogo de POT
+    int mapping = map(Value, 0, 1023, 0, 31);                               				// Mapeo de POT a ENCODER
     // read calibrated sensor values and obtain a measure of the line position from 0 to 500
     // unsigned int position = qtrrc.readLine(sensorValues);
     // print the sensor values as numbers from 0 to 1000, where 0 means maximum reflectance and
     // 1000 means minimum reflectance, followed by the line positionntro
     unsigned int position = qtrrc.readLine(sensorValues);
-    for (unsigned char i = 0; i < NUM_SENSORS; i++)                         // Lee todos los sensores del array
+    for (unsigned char i = 0; i < NUM_SENSORS; i++)                         				// Lee todos los sensores del array
     {
-        //Serial.print(sensorValues[i]);                                    // Imprime los valores de los sensores
-        //Serial.print('\t');                                               // Imprime un tab   
+        //Serial.print(sensorValues[i]);                                    				// Imprime los valores de los sensores
+        //Serial.print('\t');                                               				// Imprime un tab   
         if (sensorValues[i] < 500)
         {
           sensorValues[i] = 0;
